@@ -1,0 +1,736 @@
+[
+  {
+    "TC_ID": "Pos_Fun_0001",
+    "Test_Name": "Convert a short simple phrase",
+    "Input_Length_Type": "S",
+    "Input": "heta mama boodimata yanavaa.",
+    "Expected_Output": "හෙට මම බෝඩිමට යනවා.",
+    "Actual_Output": "හෙට මම බෝඩිමට යනවා.",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Meaning is preserved",
+      "Sinhala words are correct",
+      "Punctuation handled correctly",
+      "English words preserved if expected"
+    ],
+    "What_is_Covered": [
+      "Simple sentence",
+      "Usability flow (real-time conversion)",
+      "S (≤30 characters)",
+      "Daily language usage"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0002",
+    "Test_Name": "Convert a short simple question phrase",
+    "Input_Length_Type": "S",
+    "Input": "adha bath kamudha ?",
+    "Expected_Output": "අද බත් කමුද ?",
+    "Actual_Output": "අද බත් කමුද ?",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Word conversion and spacing are accurate",
+      "Question mark remains correctly placed.",
+      "No spelling issues observed",
+      "The interrogative structure is maintained."
+    ],
+    "What_is_Covered": [
+      "Daily language usage",
+      "Simple sentence",
+      "S (≤30 characters)",
+      "Accuracy validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0003",
+    "Test_Name": "Convert sentence with future tense",
+    "Input_Length_Type": "S",
+    "Input": "api labana sathiye trip ekak yamu",
+    "Expected_Output": "අපි ලබන සතියෙ trip එකක් යමු\n\n",
+    "Actual_Output": "අපි ලබන සතියෙ trip එකක් යමු\n\n",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Future intention is correctly transliterated",
+      "Sinhala words are converted accurately while keeping the English word unchanged.",
+      "Sentence structure remains clear and grammatically correct.",
+      "The overall meaning of the sentence is not altered."
+    ],
+    "What_is_Covered": [
+      "Greeting / request / response",
+      "Future tense",
+      "S (≤ 30 characters)",
+      "Accuracy validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0004",
+    "Test_Name": "Mixed Singlish with technical terms",
+    "Input_Length_Type": "M",
+    "Input": "magee laptop eke RAM eka aduyi, ekayi mee lag venne.",
+    "Expected_Output": "මගේ laptop eke RAM එක අඩුයි, එකයි මේ lag වෙන්නෙ.\n\n",
+    "Actual_Output": "මගේ laptop eke RAM එක අඩුයි, එකයි මේ lag වෙන්නෙ.\n\n",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "English technical terms (RAM, laptop, slow) are retained or transliterated clearly without breaking the Sinhala syntax",
+      "Sinhala words are translated with correct spelling and grammar.",
+      "The sentence remains clear and understandable after conversion.",
+      "The meaning of the mixed Singlish sentence is correctly preserved."
+    ],
+    "What_is_Covered": [
+      "Mixed Singlish + English",
+      "Simple sentence",
+      "M (31–299 characters)",
+      "Robustness validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0005",
+    "Test_Name": "Handling Brand names in sentences",
+    "Input_Length_Type": "M",
+    "Input": "magee paraNa Samsung Phone eka mama ammata dhunnaa",
+    "Expected_Output": "මගේ පරණ Samsung Phone එක මම අම්මට දුන්නා",
+    "Actual_Output": "මගේ පරණ Samsung Phone එක මම අම්මට දුන්නා",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Brand name \"Samsung\" is integrated naturally",
+      "The sentence meaning is correctly preserved after conversion.",
+      "Sinhala words are converted with correct spelling.",
+      "Sentence structure remains clear and natural."
+    ],
+    "What_is_Covered": [
+      "Names / places / common English words",
+      "Past tense",
+      "M (31–299 characters)",
+      "Accuracy validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0006",
+    "Test_Name": "Compound sentence with \"but\"",
+    "Input_Length_Type": "M",
+    "Input": "mama udhee paandhara nagittaa eeth bus eka miss una nisaa vaedata enna parakku unaa.",
+    "Expected_Output": "මම උදේ පාන්දර නගිට්ටා ඒත් bus එක miss උන නිසා වැඩට එන්න පරක්කු උනා.",
+    "Actual_Output": "මම උදේ පාන්දර නගිට්ටා ඒත් bus එක miss උන නිසා වැඩට එන්න පරක්කු උනා.",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "The conjunction correctly connects the two ideas",
+      "The compound sentence meaning is correctly preserved.",
+      "Mixed Singlish and English words are converted correctly.",
+      "The sentence remains clear and grammatically understandable."
+    ],
+    "What_is_Covered": [
+      "Word combination / phrase pattern",
+      "Compound sentence",
+      "M (31–299 characters)",
+      "Accuracy validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0007",
+    "Test_Name": "Complex sentence with conditions (if/then)",
+    "Input_Length_Type": "M",
+    "Input": "oyaa velaavata enavaanam mama station ekata velaa balan innam.",
+    "Expected_Output": "ඔයා වෙලාවට එනවානම් මම station එකට වෙලා බලන් ඉන්නම්.",
+    "Actual_Output": "ඔයා වෙලාවට එනවානම් මම station එකට වෙලා බලන් ඉන්නම්.",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "The conditional words (if you come) is rendered correctly.",
+      "Cause-and-effect relationship is clearly represented in Sinhala.",
+      "Mixed Singlish and English words are handled appropriately.",
+      "The overall sentence structure remains clear and natural."
+    ],
+    "What_is_Covered": [
+      "Daily language usage",
+      "Complex sentence",
+      "M (31–299 characters)",
+      "Accuracy validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0008",
+    "Test_Name": "Question about time",
+    "Input_Length_Type": "S",
+    "Input": "dhaen velaava kiiyadha kiyanna puluvandha?",
+    "Expected_Output": "දැන් වෙලාව කීයද කියන්න පුලුවන්ද?",
+    "Actual_Output": "දැන් වෙලාව කීයද කියන්න පුලුවන්ද?",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "The question word and question mark are handled correctly.",
+      "Sentence structure remains polite and clear.",
+      "Time-related words are converted accurately into Sinhala.",
+      "The interrogative meaning of the sentence is correctly preserved."
+    ],
+    "What_is_Covered": [
+      "Greeting / request / response",
+      "Interrogative (question)",
+      "S (≤ 30 characters)",
+      "Accuracy validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0009",
+    "Test_Name": "Verification question",
+    "Input_Length_Type": "S",
+    "Input": "meeka hariyata vaeda karanava nedha?",
+    "Expected_Output": "මේක හරියට වැඩ කරනව නේද?",
+    "Actual_Output": "මේක හරියට වැඩ කරනව නේද?",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "\"nedha\" is correctly transliterated to indicate verification",
+      "Sinhala words are converted with accurate spelling.",
+      "The sentence structure clearly conveys confirmation intent.",
+      "The interrogative form is maintained correctly."
+    ],
+    "What_is_Covered": [
+      "Daily language usage",
+      "Interrogative (question)",
+      "S (≤ 30 characters)",
+      "Accuracy validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0010",
+    "Test_Name": "Sentence with Date format",
+    "Input_Length_Type": "M",
+    "Input": "api 2025-04-15 dhaata party eka dhaaganna hithaagena inne.",
+    "Expected_Output": "අපි 2025-04-15 දාට party එක දාගන්න හිතාගෙන ඉන්නේ.",
+    "Actual_Output": "අපි 2025-04-15 දාට party එක දාගන්න හිතාගෙන ඉන්නේ.",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Numeric date format remains unchanged while text converts.",
+      "The sentence meaning is correctly preserved after conversion.",
+      "Mixed Singlish and English words are handled correctly.",
+      "Sinhala words are converted with accurate spelling."
+    ],
+    "What_is_Covered": [
+      "Punctuation / numbers",
+      "Simple sentence",
+      "M (31–299 characters)",
+      "Accuracy validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0011",
+    "Test_Name": "Currency handling",
+    "Input_Length_Type": "M",
+    "Input": "api Rs.5000 k vagee party ekata ekathu karanna hithaagena innee.",
+    "Expected_Output": "අපි Rs.5000 ක් වගේ party එකට එකතු කරන්න හිතාගෙන ඉන්නේ.",
+    "Actual_Output": "අපි Rs.5000 ක් වගේ party එකට එකතු කරන්න හිතාගෙන ඉන්නේ.",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Currency symbol and amount are preserved.",
+      "Numeric currency value (Rs.5000) is preserved correctly.",
+      "Sinhala grammar and sentence structure are correct.",
+      "No words are omitted or altered unintentionally."
+    ],
+    "What_is_Covered": [
+      "Punctuation / numbers",
+      "Simple sentence",
+      "M (31–299 characters)",
+      "Accuracy validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0012",
+    "Test_Name": "Exclamation and Punctuation",
+    "Input_Length_Type": "S",
+    "Input": "ammoo! anuu namayen beerunee!",
+    "Expected_Output": "අම්මෝ! අනූ නමයෙන් බේරුනේ!",
+    "Actual_Output": "අම්මෝ! අනූ නමයෙන් බේරුනේ!",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "The exclamation mark is preserved at the correct position.",
+      "The expressive tone of the sentence is maintained.",
+      "Sinhala spelling and word forms are correct.",
+      "No words are omitted or altered unintentionally."
+    ],
+    "What_is_Covered": [
+      "Punctuation / numbers",
+      "Simple sentence",
+      "S (≤ 30 characters)",
+      "Accuracy validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0013",
+    "Test_Name": "Negation & Imperative",
+    "Input_Length_Type": "S",
+    "Input": "mata hodhatama uNa hedhilaa, adha enna vennee naehae.",
+    "Expected_Output": "මට හොදටම උණ හෙදිලා, අද එන්න වෙන්නේ නැහැ.",
+    "Actual_Output": "මට හොදටම උණ හෙදිලා, අද එන්න වෙන්නේ නැහැ.",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "The negation \"naehae\" converts correctly to \"නැහැ\"",
+      "Imperative meaning (\"adha enna vennee\") is preserved accurately.",
+      "Sinhala spelling and punctuation are correct.",
+      "Punctuation and spacing are correctly maintained."
+    ],
+    "What_is_Covered": [
+      "Daily language usage",
+      "Negation (negative form)",
+      "S (≤ 30 characters)",
+      "Accuracy validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0014",
+    "Test_Name": "Imperative command",
+    "Input_Length_Type": "S",
+    "Input": "karuNaakara mema sThaanayee dhum biimen valakinna!",
+    "Expected_Output": "කරුණාකර මෙම ස්ථානයේ දුම් බීමෙන් වලකින්න!",
+    "Actual_Output": "කරුණාකර මෙම ස්ථානයේ දුම් බීමෙන් වලකින්න!",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Polite command structure is preserved",
+      "Sinhala spelling and grammar are correct.",
+      "Punctuation (exclamation mark) is maintained properly.",
+      "The sentence meaning and imperative tone are accurately conveyed."
+    ],
+    "What_is_Covered": [
+      "Greeting / request / response",
+      "Imperative (command)",
+      "S (≤ 30 characters)",
+      "Accuracy validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0015",
+    "Test_Name": "Long paragraph with mixed content",
+    "Input_Length_Type": "L",
+    "Input": "mama adha edhaa kiyapu gamana yanavaa, heta thiyena viva ekee mata thiyena part ekee summary ekak mata dhenna puluvandha? mata heta enna baeri unoth lecturer ekka kathaa karagena time eka passe dhavasakata venas karagamu. mama lecturer ta mail ekak dhaannam.",
+    "Expected_Output": "මම අද එදා කියපු ගමන යනවා, හෙට තියෙන viva එකේ මට තියෙන part එකේ summary එකක් මට දෙන්න පුලුවන්ද? මට හෙට එන්න බැරි උනොත් lecturer එක්ක කතා කරගෙන time එක පස්සෙ දවසකට වෙනස් කරගමු. මම lecturer ට mail එකක් දාන්නම්.",
+    "Actual_Output": "මම අද එදා කියපු ගමන යනවා, හෙට තියෙන viva එකේ මට තියෙන part එකේ summary එකක් මට දෙන්න පුලුවන්ද? මට හෙට එන්න බැරි උනොත් lecturer එක්ක කතා කරගෙන time එක පස්සෙ දවසකට වෙනස් කරගමු. මම lecturer ට mail එකක් දාන්නම්.",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "The system handles large text blocks without lagging or truncating text.",
+      "Meaning and context of each sentence in the paragraph are preserved.",
+      "Sinhala spelling, grammar, and punctuation are correctly maintained.",
+      "Questions, requests, and conditional statements are accurately conveyed."
+    ],
+    "What_is_Covered": [
+      "Formatting (spaces / line breaks / paragraph)",
+      "Complex sentence",
+      "L (≥ 300 characters)",
+      "Robustness validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0016",
+    "Test_Name": "Long and advanced paragraph with different expressions",
+    "Input_Length_Type": "L",
+    "Input": "magee paraNa phone eka naethi una nisaa kalin number eka dhen vaeda karanne naee, ee nisaa whatsapp number eka aluth unaa, mee thiyenne magee aluth number eka, 0771234567. meeka save karaganna, puluvannam maava apee ITPM project group ekata add karanna. apee paraNa group ekee kasungeyi kamalgeyi numbers dhekath mata evanna.",
+    "Expected_Output": "මගේ පරණ phone එක නැති උන නිසා කලින් number එක දෙන් වැඩ කරන්නේ නෑ, ඒ නිසා whatsapp number එක අලුත් උනා, මේ තියෙන්නෙ මගේ අලුත් number එක, 0771234567. මේක save කරගන්න, පුලුවන්නම් මාව අපේ ITPM project group එකට add කරන්න. අපේ පරණ group එකේ කසුන්ගෙයි කමල්ගෙයි numbers දෙකත් මට එවන්න.",
+    "Actual_Output": "මගේ පරණ phone එක නැති උන නිසා කලින් number එක දෙන් වැඩ කරන්නේ නෑ, ඒ නිසා whatsapp number එක අලුත් උනා, මේ තියෙන්නෙ මගේ අලුත් number එක, 0771234567. මේක save කරගන්න, පුලුවන්නම් මාව අපේ ITPM project group එකට add කරන්න. අපේ පරණ group එකේ කසුන්ගෙයි කමල්ගෙයි numbers දෙකත් මට එවන්න.",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "The system handles large text blocks without lagging or truncating text.",
+      "Multiple expressions and contexts (numbers, names, instructions) are accurately preserved.",
+      "Sinhala spelling, grammar, and punctuation are correct throughout the paragraph.",
+      "Requests and instructions are conveyed clearly and correctly."
+    ],
+    "What_is_Covered": [
+      "Formatting (spaces / line breaks / paragraph)",
+      "Complex sentence",
+      "L (≥ 300 characters)",
+      "Robustness validation"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0017",
+    "Test_Name": "English abbreviations and short forms",
+    "Input_Length_Type": "S",
+    "Input": "mama OTP eka enter karanna one.",
+    "Expected_Output": "මම OTP එක enter කරන්න ඕනේ.",
+    "Actual_Output": "මම OTP එක enter කරන්න ඕනේ.",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "The abbreviation \"NIC\" is preserved correctly.",
+      "The meaning of the sentence is accurately translated.",
+      "Sinhala spelling and grammar are correct.",
+      "No words are omitted or altered unintentionally."
+    ],
+    "What_is_Covered": [
+      "Handling of English abbreviations within sentences",
+      "Short text (S ≤30 characters)",
+      "Accuracy of translation and meaning preservation",
+      "Preservation of sentence structure and syntax"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0018",
+    "Test_Name": "Multiple spaces",
+    "Input_Length_Type": "S",
+    "Input": "amma gedhara  yanvaa.",
+    "Expected_Output": "අම්මා ගෙදර යනවා",
+    "Actual_Output": "අම්මා ගෙදර යනවා",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Extra spaces between words are removed correctly.",
+      "Sentence meaning is preserved accurately.",
+      "Sinhala spelling and grammar are correct.",
+      "No words are omitted or altered unintentionally."
+    ],
+    "What_is_Covered": [
+      "Handling of multiple/extra spaces",
+      "Short text (S ≤30 characters)",
+      "Accuracy of translation and meaning preservation",
+      "Proper spacing and sentence structure"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0019",
+    "Test_Name": "Line breaks (multi-line input)",
+    "Input_Length_Type": "M",
+    "Input": "api office ekee inne\nadhama meeting ekata\nyanavaa",
+    "Expected_Output": "අපි office එකේ ඉන්නේ\nඅදම meeting එකට\nයනවා",
+    "Actual_Output": "අපි office එකේ ඉන්නේ\nඅදම meeting එකට\nයනවා",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Line breaks are preserved correctly in the output.",
+      "Sentence meaning is preserved accurately across multiple lines.",
+      "Sinhala spelling and grammar are correct.",
+      "No words are omitted or altered unintentionally."
+    ],
+    "What_is_Covered": [
+      "Handling of line breaks / multi-line input",
+      "Medium-length text (M) (31–299 characters)",
+      "Accuracy of translation and meaning preservation",
+      "Proper sentence structure and formatting"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0020",
+    "Test_Name": "Paragraph-style input (long )",
+    "Input_Length_Type": "L",
+    "Input": "dhitvaa suLi kuNaatuva samaGa aethi vuu gQQvathura saha naayayaeem heethuven maarga sQQvarDhana aDhikaariya sathu maarga kotas 430k vinaashayata pathva aethi athara, ehi samastha dhiga pramaaNaya kiloomiitar 300k pamaNa vana bava pravaahana,mahaamaarga saha naagarika sQQvarDhana amaathYA bimal rathnaayaka saDHahan kaLeeya.",
+    "Expected_Output": "දිට්වා සුළි කුණාටුව සමඟ ඇති වූ ගංවතුර සහ නායයෑම් හේතුවෙන් මාර්ග සංවර්ධන අධිකාරිය සතු මාර්ග කොටස් 430ක් විනාශයට පත්ව ඇති අතර, එහි සමස්ත දිග ප්‍රමාණය කිලෝමීටර් 300ක් පමණ වන බව ප්‍රවාහන,මහාමාර්ග සහ නාගරික සංවර්ධන අමාත්‍ය බිමල් රත්නායක සඳහන් කළේය.",
+    "Actual_Output": "දිට්වා සුළි කුණාටුව සමඟ ඇති වූ ගංවතුර සහ නායයෑම් හේතුවෙන් මාර්ග සංවර්ධන අධිකාරිය සතු මාර්ග කොටස් 430ක් විනාශයට පත්ව ඇති අතර, එහි සමස්ත දිග ප්‍රමාණය කිලෝමීටර් 300ක් පමණ වන බව ප්‍රවාහන,මහාමාර්ග සහ නාගරික සංවර්ධන අමාත්‍ය බිමල් රත්නායක සඳහන් කළේය.",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Transliteration and administrative tone are preserved exactly.",
+      "Numbers, technical terms, and titles are maintained.",
+      "Sentence structure, capitalization, and punctuation mimic the original style.",
+      "Paragraph is long enough (≥300 characters) and not truncated."
+    ],
+    "What_is_Covered": [
+      "Paragraph-style input handling (L ≥ 300 characters)",
+      "Formal / technical / transliterated content handling",
+      "Accuracy of numbers, spelling, and administrative terms",
+      "Proper paragraph structure with old-style transliteration"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0021",
+    "Test_Name": "Slang and colloquial phrasing",
+    "Input_Length_Type": "S",
+    "Input": "machan, mama hariyata innavaa!",
+    "Expected_Output": "මචං, මම හරියට ඉන්නවා!",
+    "Actual_Output": "මචං, මම හරියට ඉන්නවා!",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Slang term \"machan\" is preserved correctly.",
+      "Informal conversational tone is maintained.",
+      "Sinhala spelling and punctuation are correct.",
+      "Meaning of the casual statement is accurately preserved."
+    ],
+    "What_is_Covered": [
+      "Slang and colloquial phrasing",
+      "Short text (S ≤30 characters)",
+      "Accuracy of translation and meaning preservation",
+      "Informal conversational style"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0022",
+    "Test_Name": "Time formats",
+    "Input_Length_Type": "S",
+    "Input": "mee meeting eka 7.30 AM thiyenavaa.",
+    "Expected_Output": "මේ meeting එක 7.30 AM තියෙනවා.",
+    "Actual_Output": "මේ meeting එක 7.30 AM තියෙනවා.",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Time format is preserved exactly.",
+      "AM/PM notation is maintained correctly.",
+      "No alteration occurs to numbers or punctuation.",
+      "Meaning of the time is fully preserved."
+    ],
+    "What_is_Covered": [
+      "Time format handling (12-hour notation)",
+      "Short text (S ≤30 characters)",
+      "Accuracy of numbers, punctuation, and notation",
+      "Preservation of original time meaning"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0023",
+    "Test_Name": "Sentences containing places and common English words",
+    "Input_Length_Type": "S",
+    "Input": "api trip eka yannee Colombo.",
+    "Expected_Output": "අපි trip එක යන්නෙ colombo.",
+    "Actual_Output": "අපි trip එක යන්නෙ colombo.",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Place \"Colombo\" and English word \"trip\" are preserved exactly.",
+      "Short, natural colloquial phrasing is maintained.",
+      "Meaning of the sentence is fully preserved.",
+      "Sinhala spelling and punctuation are correct."
+    ],
+    "What_is_Covered": [
+      "Handling of places and English words in colloquial Sinhala",
+      "Short text (S ≤30 characters)",
+      "Accuracy of translation and meaning preservation",
+      "Informal/colloquial conversational style"
+    ]
+  },
+  {
+    "TC_ID": "Pos_Fun_0024",
+    "Test_Name": "Repeated word expressions for emphasis",
+    "Input_Length_Type": "S",
+    "Input": "hari hari, mama ready.",
+    "Expected_Output": "හරි හරි, මම ready.",
+    "Actual_Output": "හරි හරි, මම ready.",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Repeated word \"hari hari / හරි හරි\" is preserved correctly.",
+      "Meaning and emphasis of repetition is maintained.",
+      "English word \"ready\" remains unchanged.",
+      "Sinhala spelling and punctuation are correct."
+    ],
+    "What_is_Covered": [
+      "Repeated words for emphasis",
+      "Short text (S ≤30 characters)",
+      "Accuracy of meaning and emphasis preservation",
+      "Handling mixed Sinhala-English phrases"
+    ]
+  },
+  {
+    "TC_ID": "Neg_Fun_0001",
+    "Test_Name": "Joined words",
+    "Input_Length_Type": "S",
+    "Input": "mamagedharayanavaa",
+    "Expected_Output": "මම ගෙදර යනවා",
+    "Actual_Output": "මමගෙදරයනවා",
+    "Status": "Fail",
+    "Accuracy_Justification": [
+      "Words were joined without spaces, causing the system to misinterpret word boundaries.",
+      "The transliteration engine failed to correctly map each Singlish segment to Sinhala letters.",
+      "Output is partially correct but misses proper spacing between words."
+    ],
+    "What_is_Covered": [
+      "Typographical error handling",
+      "Simple sentence",
+      "S (≤30 characters)",
+      "Robustness validation – tests system behavior on unusual / edge-case input"
+    ]
+  },
+  {
+    "TC_ID": "Neg_Fun_0002",
+    "Test_Name": "Extra letters in word – short",
+    "Input_Length_Type": "S",
+    "Input": "mata bath ooneee",
+    "Expected_Output": "මට බත් ඕනේ",
+    "Actual_Output": "මට බත් ඕනේඑ",
+    "Status": "Fail",
+    "Accuracy_Justification": [
+      "Extra letters (eee) at the end of the input caused the system to produce an additional Sinhala character (එ).",
+      "The transliteration engine misinterpreted the repeated vowels as part of a new word or syllable.",
+      "Demonstrates the system's weakness in handling minor typographical errors in short sentences.",
+      "Shows that even small deviations from standard Singlish spelling can cause incorrect output."
+    ],
+    "What_is_Covered": [
+      "Daily language usage / Typographical error handling",
+      "Simple sentence",
+      "S (≤30 characters)",
+      "Robustness validation – tests system's handling of spelling variations"
+    ]
+  },
+  {
+    "TC_ID": "Neg_Fun_0003",
+    "Test_Name": "Extra punctuation – question marks",
+    "Input_Length_Type": "S",
+    "Input": "oyaa enavadha??",
+    "Expected_Output": "ඔයා එනවද?\n",
+    "Actual_Output": "ඔයා එනවද??",
+    "Status": "Fail",
+    "Accuracy_Justification": [
+      "Double question marks (??) were preserved in the output instead of being normalized.",
+      "The system misinterpreted punctuation as part of the word, causing incorrect output.",
+      "Highlights a weakness in handling punctuation in interrogative sentences.",
+      "Shows that small variations in punctuation can make the system fail even with correct spelling."
+    ],
+    "What_is_Covered": [
+      "Punctuation / numbers",
+      "Interrogative (question)",
+      "S (≤30 characters)",
+      "tests system behavior with extra punctuation"
+    ]
+  },
+  {
+    "TC_ID": "Neg_Fun_0004",
+    "Test_Name": "Repeated vowels in medium sentence",
+    "Input_Length_Type": "M",
+    "Input": "api paasal yannvaa saha passe chitrapatayakuth balanavaa.",
+    "Expected_Output": "අපි පාසල් යන්නවා සහ පස්සේ චිත්‍රපටයකුත් බලනවා.",
+    "Actual_Output": "අපි පාසල් යන්නවා සහ පස්සේ චිත්‍රපටයක්ත් බලනවා.",
+    "Status": "Fail",
+    "Accuracy_Justification": [
+      "Repeated vowels in yannvaa and balanavaa caused the system to partially misalign words.",
+      "Output may include extra letters or emphasis marks not intended in standard Sinhala.",
+      "Demonstrates weakness in handling vowel repetitions in medium-length sentences.",
+      "Shows that compound sentences are more prone to incorrect transliteration with non-standard spelling."
+    ],
+    "What_is_Covered": [
+      "Daily language usage/Typographical error handling",
+      "Compound sentence",
+      "Medium (31–299 characters)",
+      ""
+    ]
+  },
+  {
+    "TC_ID": "Neg_Fun_0005",
+    "Test_Name": "Special characters – medium sentence",
+    "Input_Length_Type": "M",
+    "Input": "mata %bath oonee saha mama @gedhara yanavaa",
+    "Expected_Output": "මට බත් ඕනේ සහ මම ගෙදර යනවා",
+    "Actual_Output": "මට %බත් ඕනේ සහ මම @ගෙදර යනවා",
+    "Status": "Fail",
+    "Accuracy_Justification": [
+      "Special characters (% and @) were incorrectly included in the Sinhala output.",
+      "The transliteration engine failed to ignore non-alphabetical symbols.",
+      "Demonstrates system's weakness in handling special characters in medium-length sentences.",
+      "Highlights robustness issues when unusual symbols appear within normal text."
+    ],
+    "What_is_Covered": [
+      "Typographical error handling / Daily language usage",
+      "Compound sentence",
+      "Medium (31–299 characters)",
+      "tests system handling of embedded special characters"
+    ]
+  },
+  {
+    "TC_ID": "Neg_Fun_0006",
+    "Test_Name": "Informal spelling – short sentence",
+    "Input_Length_Type": "S",
+    "Input": "mama heta iskole yanavaa",
+    "Expected_Output": "මම හෙට ඉස්කෝලේ  යනවා",
+    "Actual_Output": "මම හෙට ඉස්කොලෙ යනවා",
+    "Status": "Fail",
+    "Accuracy_Justification": [
+      "Informal spelling iskol caused slightly incorrect transliteration (ඉස්කෝලේ instead of ඉස්කොලෙ).",
+      "System did not fully recognize standard Sinhala spelling for commonly used words.",
+      "Demonstrates weakness in handling everyday words with multiple possible phonetic spellings.",
+      "Highlights the system's limitation in producing formal output for informal or phonetic Singlish."
+    ],
+    "What_is_Covered": [
+      "Mixed Singlish + English / Daily language usage",
+      "Simple sentence",
+      "Short (≤30 characters)",
+      ""
+    ]
+  },
+  {
+    "TC_ID": "Neg_Fun_0007",
+    "Test_Name": "Long sentence with spelling mistakes and mixed English",
+    "Input_Length_Type": "M",
+    "Input": "mama heta office yanawaa. mama report ekak type karanavaa saha email ekak send karanavaa. api team ekka Zoom meeTing ekak thiyenavaa. passe lunch karanavaa saha game ekak kella saha poddak study karanavaa. mathu poddak tired hithenavaa, api poddak shopping karanavaa saha passe api class ekata yanavaa. mama lesson tika type karanavaa saha api homework karanavaa. mama online class attend karanavaa, saha api discussion karanavaa.",
+    "Expected_Output": "මම හෙට office යනවා. මම report එකක් type කරන්නවා සහ email එකක් send කරන්නවා. අපි team එකට Zoom meeting එකක් තියෙනවා. පස්සේ lunch කරන්නවා සහ game එකක් කෙල්ල සහ පොඩ්ඩක් study කරන්නවා. මතු පොඩ්ඩක් tired හිතෙනවා, අපි පොඩ්ඩක් shopping කරන්නවා සහ පස්සේ class එකට යනවා. මම lesson ටික type කරන්නවා සහ homework කරන්නවා. මම online class එකක් attend කරන්නවා, සහ discussion කරන්නවා.",
+    "Actual_Output": "මම හෙට office යනwආ. මම report එකක් type කරනවා සහ email එකක් send කරනවා. අපි team එක්ක Zoom මේඨින්ග් එකක් තියෙනවා. පස්සෙ lunch කරනවා සහ ගමේ එකක් කෙල්ල සහ පොඩ්ඩක් study කරනවා. මතු පොඩ්ඩක් tired හිතෙනවා, අපි පොඩ්ඩක් shopping කරනවා සහ පස්සෙ අපි class එකට යනවා. මම lesson ටික type කරනවා සහ අපි homework කරනවා. මම online class attend කරනවා, සහ අපි discussion කරනවා.",
+    "Status": "Fail",
+    "Accuracy_Justification": [
+      "Mixed English words (report ekak, email ekak, Zoom meeTing) not transliterated.",
+      "Informal spellings (yanawaa, karanavaa) remain in Singlish.",
+      "Long sentence with multiple clauses causes partial transliteration failures.",
+      "Demonstrates system weakness in handling long, complex sentences with mixed English + informal spellings."
+    ],
+    "What_is_Covered": [
+      "Mixed Singlish + English / Daily language usage / Typographical error handling",
+      "Compound and complex sentences",
+      "Long (≥300 characters)",
+      "tests system handling of long sentences with multiple errors"
+    ]
+  },
+  {
+    "TC_ID": "Neg_Fun_0008",
+    "Test_Name": "Extra characters",
+    "Input_Length_Type": "S",
+    "Input": "mama heta office yanawaa.",
+    "Expected_Output": "මම හෙට office යනවා.",
+    "Actual_Output": "මම හෙට office යනwආ.",
+    "Status": "Fail",
+    "Accuracy_Justification": [
+      "Extra characters (wආ) were incorrectly added at the end of the sentence.",
+      "Demonstrates system failure in handling short sentences with mixed English + Singlish.",
+      "Shows weakness in processing punctuation and sentence endings.",
+      "Highlights robustness issue with simple sentences where extra characters are introduced."
+    ],
+    "What_is_Covered": [
+      "Mixed Singlish + English / Daily language usage",
+      "Simple sentence",
+      "Short (≤30 characters)",
+      ""
+    ]
+  },
+  {
+    "TC_ID": "Neg_Fun_0009",
+    "Test_Name": "Repeated letters",
+    "Input_Length_Type": "S",
+    "Input": "mataaa bath oonee",
+    "Expected_Output": "මට බත් ඕනේ.",
+    "Actual_Output": "මටාඅ බත් ඕනේ.",
+    "Status": "Fail",
+    "Accuracy_Justification": [
+      "Repeated vowels (aaa) in mataaa caused extra characters (ාඅ) in Sinhala output.",
+      "System fails to normalize repeated letters in short words.",
+      "Demonstrates a robustness issue with typographical errors.",
+      "Highlights weakness in handling informal input with repeated letters."
+    ],
+    "What_is_Covered": [
+      "Daily language usage / Typographical error handling",
+      "Simple sentence",
+      "Short (≤30 characters)",
+      "tests system behavior on repeated letters in input"
+    ]
+  },
+  {
+    "TC_ID": "Neg_Fun_0010",
+    "Test_Name": "Incorrect vowel length",
+    "Input_Length_Type": "S",
+    "Input": "mama gedhara yanava",
+    "Expected_Output": "මම ගෙදර යනවා",
+    "Actual_Output": "මම ගෙදර යනව.",
+    "Status": "Fail",
+    "Accuracy_Justification": [
+      "Input uses shortened vowel form yanava instead of yanavaa.",
+      "System produced incomplete Sinhala word (යනව) instead of correct form (යනවා).",
+      "Shows system sensitivity to vowel length accuracy.",
+      "Demonstrates failure in handling slightly informal but common Singlish spelling."
+    ],
+    "What_is_Covered": [
+      "Daily language usage",
+      "Simple sentence",
+      "Short (≤30 characters)",
+      "handling informal vowel shortening"
+    ]
+  },
+  {
+    "TC_ID": "Pos_UI_001",
+    "Test_Name": "Real-time output update on typing",
+    "Input_Length_Type": "S",
+    "Input": "oyaa enavadha",
+    "Expected_Output": "ඔයා එනවාද",
+    "Actual_Output": "ඔයා එනවාද",
+    "Status": "Pass",
+    "Accuracy_Justification": [
+      "Sinhala output appears instantly while the user types each character.",
+      "Output updates dynamically without pressing any button.",
+      "No delay or flicker observed during typing.",
+      "Confirms stable real-time UI behavior for interrogative sentences."
+    ],
+    "What_is_Covered": [
+      "Daily language usage",
+      "Interrogative (question)",
+      "Short (≤30 characters)",
+      "Real-time output update behavior"
+    ]
+  }
+]

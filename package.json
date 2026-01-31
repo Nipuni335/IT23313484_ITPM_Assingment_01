@@ -1,0 +1,26 @@
+{
+  "name": "it23313484_itpm_assingment_01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nipuni335/IT23313484_ITPM_Assingment_01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Nipuni335/IT23313484_ITPM_Assingment_01/issues"
+  },
+  "homepage": "https://github.com/Nipuni335/IT23313484_ITPM_Assingment_01#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.1",
+    "@types/node": "^25.1.0"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
